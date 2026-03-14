@@ -63,11 +63,11 @@ export default async function FlavorsPage() {
                   {String(f.id)}
                 </span>
               </div>
-              {descriptionKey && f[descriptionKey] && (
+              {descriptionKey && f[descriptionKey] != null ? (
                 <p className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">
                   {String(f[descriptionKey])}
                 </p>
-              )}
+              ) : null}
             </div>
             <Link
               href={`/flavors/${f.id}`}
